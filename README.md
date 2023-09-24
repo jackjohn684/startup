@@ -1,5 +1,5 @@
 Elevator pitch
-Have you ever been waiting in a line or for a class with one of your buddies and wanted to play a simple game to pass the time? Well, what’s a simpler game than Connect 4. With this website, you can play a quick game of connect four no matter where you are. You can also sign in and make an account in order to track your score and see how your win-loss percentage compares to other people online through the leaderboard.
+Have you ever been waiting in a line or for a class with one of your buddies and wanted to play a simple game to pass the time? Well, what’s a simpler game than Connect 4? With this website, you can play a quick game of connect four no matter where you are. You can also sign in and make an account in order to track your score and see how your win-loss percentage compares to other people online through the leaderboard.
 
  ![image](https://github.com/jackjohn684/startup/assets/143542012/6fa264da-6344-4f8a-91da-c9c191abc4c4)
 ![image](https://github.com/jackjohn684/startup/assets/143542012/71223e21-041b-4ef8-9359-f46c37f64831)

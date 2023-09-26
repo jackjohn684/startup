@@ -1,4 +1,5 @@
-Elevator pitch
+Elevator pitch:
+
 Have you ever been waiting in a line or for a class with one of your buddies and wanted to play a simple game to pass the time? Well, what’s a simpler game than Connect 4? With this website, you can play a quick game of connect four no matter where you are. You can also sign in and make an account in order to track your score and see how your win-loss percentage compares to other people online through the leaderboard.
 
  ![image](https://github.com/jackjohn684/startup/assets/143542012/6fa264da-6344-4f8a-91da-c9c191abc4c4)
@@ -29,3 +30,6 @@ Login- Register and login users. One can log in so that they can access their ow
 
 WebSocket- When someone’s win ratio changes, it will broadcast it to all the other users in the leaderboard.
 React- Application ported to use the React web framework.
+
+Startup HTML
+I deployed the simon files to my website and I changed a couple things. I added a new page called "yee", and I added a link to it in all of the other pages. The page, "yee" has a bit of text and a lot of buttons in it.

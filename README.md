@@ -33,3 +33,20 @@ React- Application ported to use the React web framework.
 
 Startup HTML
 I deployed the simon files to my website and I changed a couple things. I added a new page called "yee", and I added a link to it in all of the other pages. The page, "yee" has a bit of text and a lot of buttons in it.
+
+HTML deliverable
+
+HTML pages - I'll have four HTML pages. One for the login, one for the game, one for the win-loss history, and one for the win-loss leaderboard.
+
+Links - The login page links to the play page. Just like the Simon application, all of the pages link to the other ones.
+
+Text - There are many textual descriptions
+
+Images - I put a connect 4 image I found from Wikipedia on the home page
+
+Login - Input box and submit button for login.
+
+Database - The game history represents data pulled from the database
+
+WebSocket - The notifications of when someone starts a game shows realtime communication I think.
+

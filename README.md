@@ -31,8 +31,8 @@ Login- Register and login users. One can log in so that they can access their ow
 WebSocket- When someone’s win ratio changes, it will broadcast it to all the other users in the leaderboard.
 React- Application ported to use the React web framework.
 
-Startup HTML
 
+## Simon.html
 I deployed the simon files to my website and I changed a couple things. I added a new page called "yee", and I added a link to it in all of the other pages. The page, "yee" has a bit of text and a lot of buttons in it.
 
 ## HTML deliverable

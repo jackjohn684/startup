@@ -51,3 +51,14 @@ I deployed the simon files to my website and I changed a couple things. I added 
 
 **WebSocket** - The notifications of when someone starts a game shows realtime communication.
 
+## CSS Deliverable
+
+For this deliverable I properly styled the application into its final appearance.
+- **Header, footer and main content body**
+- **Navigation elements** - All of the links are in the top right corner in a type of menu. I also changed the color, the font and removed the underlines.
+- - **Responsive to window resizing** - I made the connect 4 board shrink when the page changes size. I also made certain less necessary parts of the webside disappear when the page gets small enough.
+- **Application elements** - I did my best to make everything look good and usable.
+- **Application text content** - The same fonts for all of the pages
+- **Application images** I still have the image in the home page.
+
+

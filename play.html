@@ -4,14 +4,14 @@
         <meta charset = "UTF-8"/>
         <meta name = "viewport" content = "width=device-width, initial-scalse = 1.0" />
         <title>Connect4</title>
-        <link rel="stylesheet" href="main.css" />
-        <link rel="stylesheet" href="play.css" />
         <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
         rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
         crossorigin="anonymous"
       />
+      <link rel="stylesheet" href="main.css" />
+      <link rel="stylesheet" href="play.css" />
     </head>
     <body class="bg-dark text-light">
       <header class="container-fluid">
@@ -19,16 +19,16 @@
           <a class="navbar-brand" href="#">Connect4<sup>&reg;</sup></a>
           <menu class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link " href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="play.html">Play</a>
+              <a class="nav-link active" href="play.html">Play</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="leaderboard.html">Game History</a>
+              <a class="nav-link" href="leaderboard.html">Leaderboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="GameHistory.html">Leaderboard</a>
+              <a class="nav-link" href="GameHistory.html">Game History</a>
             </li>
           </menu>
         </nav>
@@ -45,10 +45,10 @@
     </div>
 
   <!-- More formatting with old style HTML -->
+      
+    <div class="board">
 
-  <div class="board">
-
-    <ul class="column" id="c1">
+    <ul class="column px-0" id="c1">
         <p id="c1r6"></p>
         <p id="c1r5"></p>
         <p id="c1r4"></p>
@@ -56,7 +56,7 @@
         <p id="c1r2"></p>
         <p id="c1r1"></p>
     </ul>
-          <ul class="column" id="c2">
+          <ul class="column px-0" id="c2">
         <p id="c1r6"></p>
         <p id="c1r5"></p>
         <p id="c1r4"></p>
@@ -64,7 +64,7 @@
         <p id="c1r2"></p>
         <p id="c1r1"></p>
     </ul>
-          <ul class="column" id="c3">
+          <ul class="column px-0" id="c3">
         <p id="c1r6"></p>
         <p id="c1r5"></p>
         <p id="c1r4"></p>
@@ -72,7 +72,7 @@
         <p id="c1r2"></p>
         <p id="c1r1"></p>
     </ul>
-          <ul class="column" id="c4">
+          <ul class="column px-0" id="c4">
         <p id="c1r6"></p>
         <p id="c1r5"></p>
         <p id="c1r4"></p>
@@ -80,7 +80,7 @@
         <p id="c1r2"></p>
         <p id="c1r1"></p>
     </ul>
-          <ul class="column" id="c5">
+          <ul class="column px-0" id="c5">
         <p id="c1r6"></p>
         <p id="c1r5"></p>
         <p id="c1r4"></p>
@@ -88,7 +88,7 @@
         <p id="c1r2"></p>
         <p id="c1r1"></p>
     </ul>
-          <ul class="column" id="c6">
+          <ul class="column px-0" id="c6">
         <p id="c1r6"></p>
         <p id="c1r5"></p>
         <p id="c1r4"></p>
@@ -96,7 +96,7 @@
         <p id="c1r2"></p>
         <p id="c1r1"></p>
     </ul>
-          <ul class="column" id="c7">
+          <ul class="column px-0" id="c7">
         <p id="c1r6"></p>
         <p id="c1r5"></p>
         <p id="c1r4"></p>
@@ -104,6 +104,7 @@
         <p id="c1r2"></p>
         <p id="c1r1"></p>
     </ul>
+  </div>
 
     </div>
   </div>
@@ -111,84 +112,7 @@
 
 
 
-  <!--
-  <canvas id = "canvasDemo" width="190" height = "150" style = "border: 1px solid #000000"></canvas>
-  <script> 
-  const ctx = document.getElementById('canvasDemo').getContext('2d');
-  ctx.beginPath();
-  ctx.arc(20, 10, 10, 0, 2* Math.PI);
-  ctx.moveTo(30,35);
-  ctx.arc(20, 35, 10, 0, 2* Math.PI);
-  ctx.moveTo(30,60);
-  ctx.arc(20, 60, 10,  0, 2* Math.PI);
-  ctx.moveTo(30,85);
-  ctx.arc(20, 85, 10, 0, 2* Math.PI);
-  ctx.moveTo(30,110);
-  ctx.arc(20, 110, 10, 0, 2* Math.PI);
-  ctx.moveTo(55, 10);
-  ctx.arc(45, 10, 10, 0, 2* Math.PI);
-  ctx.moveTo(55,35);
-  ctx.arc(45, 35, 10, 0, 2* Math.PI);
-  ctx.moveTo(55,60);
-  ctx.arc(45, 60, 10,  0, 2* Math.PI);
-  ctx.moveTo(55,85);
-  ctx.arc(45, 85, 10, 0, 2* Math.PI);
-  ctx.moveTo(55,110);
-  ctx.arc(45, 110, 10, 0, 2* Math.PI);
-  ctx.moveTo(80, 10)
-  ctx.arc(70, 10, 10, 0, 2* Math.PI);
-  ctx.moveTo(80,35);
-  ctx.arc(70, 35, 10, 0, 2* Math.PI);
-  ctx.moveTo(80,60);
-  ctx.arc(70, 60, 10,  0, 2* Math.PI);
-  ctx.moveTo(80,85);
-  ctx.arc(70, 85, 10, 0, 2* Math.PI);
-  ctx.moveTo(80,110);
-  ctx.arc(70, 110, 10, 0, 2* Math.PI);
-  ctx.moveTo(105, 10);
-  ctx.arc(95, 10, 10, 0, 2* Math.PI);
-  ctx.moveTo(105,35);
-  ctx.arc(95, 35, 10, 0, 2* Math.PI);
-  ctx.moveTo(105,60);
-  ctx.arc(95, 60, 10,  0, 2* Math.PI);
-  ctx.moveTo(105,85);
-  ctx.arc(95, 85, 10, 0, 2* Math.PI);
-  ctx.moveTo(105,110);
-  ctx.arc(95, 110, 10, 0, 2* Math.PI);
-  ctx.moveTo(130, 10)
-  ctx.arc(120, 10, 10, 0, 2* Math.PI);
-  ctx.moveTo(130,35);
-  ctx.arc(120, 35, 10, 0, 2* Math.PI);
-  ctx.moveTo(130,60);
-  ctx.arc(120, 60, 10,  0, 2* Math.PI);
-  ctx.moveTo(130,85);
-  ctx.arc(120, 85, 10, 0, 2* Math.PI);
-  ctx.moveTo(130,110);
-  ctx.arc(120, 110, 10, 0, 2* Math.PI);
-  ctx.moveTo(155, 10);
-  ctx.arc(145, 10, 10, 0, 2* Math.PI);
-  ctx.moveTo(155,35);
-  ctx.arc(145, 35, 10, 0, 2* Math.PI);
-  ctx.moveTo(155,60);
-  ctx.arc(145, 60, 10,  0, 2* Math.PI);
-  ctx.moveTo(155,85);
-  ctx.arc(145, 85, 10, 0, 2* Math.PI);
-  ctx.moveTo(155,110);
-  ctx.arc(145, 110, 10, 0, 2* Math.PI);
-  ctx.moveTo(180,10);
-  ctx.arc(170, 10, 10, 0, 2* Math.PI);
-  ctx.moveTo(180,35);
-  ctx.arc(170, 35, 10, 0, 2* Math.PI);
-  ctx.moveTo(180,60);
-  ctx.arc(170, 60, 10,  0, 2* Math.PI);
-  ctx.moveTo(180,85);
-  ctx.arc(170, 85, 10, 0, 2* Math.PI);
-  ctx.moveTo(180,110);
-  ctx.arc(170, 110, 10, 0, 2* Math.PI);
-  ctx.stroke();
-  ctx.fillStyle = 'blue';
-  ctx.strokeStyle = 'blue';
-  -->
+
 </script>
 
 </header>

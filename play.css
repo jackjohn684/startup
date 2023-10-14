@@ -53,19 +53,24 @@
   width: 150vw;
   height: 75vw;
   position: absolute;
-  min-width: 500px;
-  min-height: 250px;
-  max-width: min(80vmin, 1000px);
-  max-height: min(40vmin, 500px);
+  min-width: 50px;
+  min-height: 18px;
+  max-width: min(67.5vmin, 1000px);
+  max-height: min(60vmin, 500px);
   grid-template-columns: 1fr 1fr;
-  background-color: #555;
+  gap: 20px;
+  background-color: #3505f4;
 }
 .circle {
-  height: 60px;
-  width: 60px;
+  height: 60vw;
+  width: 60vw;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: min(9vmin, 81.5px);
+  max-height: min(9vmin, 81.5px);
   border-radius:50%;
-  background-color: #ff0505;
-  border: thick solid rgb(83, 12, 12);
+  background-color: #555;
+  border: thick solid #555;
 }
 
 .button-top-right {

@@ -49,28 +49,67 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.rectangle-board{
-  width: 150vw;
-  height: 75vw;
-  position: absolute;
-  min-width: 50px;
-  min-height: 18px;
-  max-width: min(67.5vmin, 1000px);
-  max-height: min(60vmin, 500px);
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  background-color: #3505f4;
+.board{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  border: 2px solid black;
+ width: 630px;
+ background-color: rgb(74, 74, 198);
+  
+
 }
-.circle {
-  height: 60vw;
-  width: 60vw;
-  min-width: 20px;
-  min-height: 20px;
-  max-width: min(9vmin, 81.5px);
-  max-height: min(9vmin, 81.5px);
-  border-radius:50%;
-  background-color: #555;
-  border: thick solid #555;
+ul{
+  display: grid;
+  place-items: center;
+  
+}
+
+ul p{
+  margin: 5px;
+  width: 75px;
+  height: 75px;
+  border: 2px solid black;
+  border-radius: 100px;
+  background-color: white;
+}
+
+ul:hover{
+  cursor: pointer;
+  background-color: rgb(98, 136, 238);
+}
+
+@media(max-width:700px){
+  .board{
+      width: 500px;
+  }
+  ul p{
+      width: 55px;
+      height: 55px;
+      
+  }
+  
+}
+@media(max-width:520px){
+  .board{
+      width: 400px;
+  }
+  ul p{
+      width: 40px;
+      height: 40px;
+      
+  }
+  
+}
+@media(max-width:420px){
+  .board{
+      width: 320px;
+  }
+  ul p{
+      width: 30px;
+      height: 30px;
+      
+  }
+  
 }
 
 .button-top-right {

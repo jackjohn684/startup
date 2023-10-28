@@ -1,10 +1,12 @@
-
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+
+        <script src="login.js"></script>
         <link rel="stylesheet" href="main.css" />
+
         <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -37,11 +39,10 @@
     <main>
       <div id="picture" class="picture-box"><img width="200px" src="https://upload.wikimedia.org/wikipedia/en/7/79/Connect_4_Board_and_Box.jpg" alt="random" /></div>
         <h1>Welcome</h1>
-        <form method ="get" action ="play.html">
-            <label for="name">Name</label>
-            <input type = "text" id = "name" palceholder = "Your name here" />
-            <button type = "submit"> Login</button>
-        </form>
+          <div>
+            <input type="text" id="name" placeholder="Your name here" />
+            <button class="btn btn-primary" onclick="login()">Login</button>
+          </div>
         <p>Login to play</p>
 
     </main>

@@ -66,5 +66,6 @@ For this deliverable I properly styled the application into its final appearance
 - **future database data** Everytime someone wins a game, it goes into the game history that says the current date and whether red or yellow won.
 - **future WebSocket** Every once in a while when someone's playing, it lets you know that eich won a game.
 - **Interaction Logic** I got the entire connect 4 game to work the way it should
+- RIght now the leaderboard doesn't do anything, but I'll implement that in the future
 
 

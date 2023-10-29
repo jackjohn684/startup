@@ -21,6 +21,7 @@ function check(player) {
             for (j = 1; j <= 3; j++) {
                 if (document.getElementById(`c${i}r${j}`).style.backgroundColor == `${player}` && document.getElementById(`c${i}r${j + 1}`).style.backgroundColor == `${player}` && document.getElementById(`c${i}r${j + 2}`).style.backgroundColor == `${player}` && document.getElementById(`c${i}r${j + 3}`).style.backgroundColor == `${player}`) {
                     document.getElementById("whosturn").innerText = `${player} wins`
+                    this.saveScore(player);
                 }
 
             }
@@ -90,4 +91,54 @@ document.querySelectorAll(".column").forEach((e) => {
 
 function getPlayerName() {
     return localStorage.getItem('userName') ?? 'Mystery player';
+  }
+
+setInterval(() => {
+    const score = Math.floor(Math.random() * 3000);
+    const chatText = document.querySelector('#player-messages');
+    chatText.innerHTML =
+      `<div class="event"><span class="player-event">Eich</span> won a game</div>` + chatText.innerHTML;
+  }, 5000);
+
+  function reload(){
+    var container = document.getElementById("board");
+    container.reload()
+    
+   //this line is to watch the result in console , you can remove it later	
+    console.log("Refreshed"); 
+}
+
+function saveScore(score) {
+    const userName = this.getPlayerName();
+    let scores = [];
+    const scoresText = localStorage.getItem('scores');
+    if (scoresText) {
+      scores = JSON.parse(scoresText);
+    }
+    scores = this.updateScores(userName, score, scores);
+
+    localStorage.setItem('scores', JSON.stringify(scores));
+  }
+function updateScores(userName, score, scores) {
+    const date = new Date().toLocaleDateString();
+    const newScore = { name: userName, score: score, date: date };
+
+    let found = false;
+    for (const [i, prevScore] of scores.entries()) {
+      if (score > prevScore.score) {
+        scores.splice(i, 0, newScore);
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) {
+      scores.push(newScore);
+    }
+
+    if (scores.length > 10) {
+      scores.length = 10;
+    }
+
+    return scores;
   }

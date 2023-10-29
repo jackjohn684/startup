@@ -20,15 +20,13 @@ function loadScores() {
       dateTdEl.textContent = score.date;
 
       const rowEl = document.createElement('tr');
-      rowEl.appendChild(positionTdEl);
-      rowEl.appendChild(nameTdEl);
-      rowEl.appendChild(scoreTdEl);
       rowEl.appendChild(dateTdEl);
+      rowEl.appendChild(scoreTdEl);
 
       tableBodyEl.appendChild(rowEl);
     }
   } else {
-    tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to score</td></tr>';
+    tableBodyEl.innerHTML = '<tr><td colSpan=4>Play a game to see your</td></tr>';
   }
 }
 

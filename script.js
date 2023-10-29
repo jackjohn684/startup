@@ -31,6 +31,7 @@ function check(player) {
             for (j = 1; j <= 4; j++) {
                 if (document.getElementById(`c${j}r${i}`).style.backgroundColor == `${player}` && document.getElementById(`c${j + 1}r${i}`).style.backgroundColor == `${player}` && document.getElementById(`c${j + 2}r${i}`).style.backgroundColor == `${player}` && document.getElementById(`c${j + 3}r${i}`).style.backgroundColor == `${player}`) {
                     document.getElementById("whosturn").innerText = `${player} wins`
+                    this.saveScore(player);
                 }
 
             }
@@ -41,6 +42,7 @@ function check(player) {
             for (j = 1; j <= 3; j++) {
                 if (document.getElementById(`c${i}r${j}`).style.backgroundColor == `${player}` && document.getElementById(`c${i + 1}r${j + 1}`).style.backgroundColor == `${player}` && document.getElementById(`c${i + 2}r${j + 2}`).style.backgroundColor == `${player}` && document.getElementById(`c${i + 3}r${j + 3}`).style.backgroundColor == `${player}`) {
                     document.getElementById("whosturn").innerText = `${player} wins`
+                    this.saveScore(player);
                 }
 
             }
@@ -50,6 +52,7 @@ function check(player) {
             for (j = 6; j >= 4; j--) {
                 if (document.getElementById(`c${i}r${j}`).style.backgroundColor == `${player}` && document.getElementById(`c${i + 1}r${j - 1}`).style.backgroundColor == `${player}` && document.getElementById(`c${i + 2}r${j - 2}`).style.backgroundColor == `${player}` && document.getElementById(`c${i + 3}r${j - 3}`).style.backgroundColor == `${player}`) {
                     document.getElementById("whosturn").innerText = `${player} wins`
+                    this.saveScore(player);
                 }
 
             }

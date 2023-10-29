@@ -60,5 +60,11 @@ For this deliverable I properly styled the application into its final appearance
 - **Application elements** - I did my best to make everything look good and usable.
 - **Application text content** - The same fonts for all of the pages
 - **Application images** I still have the image in the home page.
+- ## Javascript Deliverable
+- For this deliverable I implimented all of the necessary things with JavaScript
+- **Future login** Someone can sign in with their name and their name is visible when they are playing connect 4. I might change it to allow two people to sign in for when they play against each other.
+- **future database data** Everytime someone wins a game, it goes into the game history that says the current date and whether red or yellow won.
+- **future WebSocket** Every once in a while when someone's playing, it lets you know that eich won a game.
+- **Interaction Logic** I got the entire connect 4 game to work the way it should
 
 

@@ -1,0 +1,15 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "Have you ever been waiting in a line or for a class with one of your buddies and wanted to play a simple game to pass the time? Well, what’s a simpler game than Connect 4? With this website, you can play a quick game of connect four no matter where you are. You can also sign in and make an account in order to track your score and see how your win-loss percentage compares to other people online through the leaderboard.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

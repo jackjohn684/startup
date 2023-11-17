@@ -122,7 +122,6 @@ function saveScore(score) {
 
     localStorage.setItem('scores', JSON.stringify(scores));
   }
-  
 function updateScores(userName, score, scores) {
     const date = new Date().toLocaleDateString();
     const newScore = { name: userName, score: score, date: date };

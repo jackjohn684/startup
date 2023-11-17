@@ -14,10 +14,14 @@ async function loadScores() {
       scores = JSON.parse(scoresText);
     }
   }
+  displayScores(scores);
+}
 
+function displayScores(scores) {
   const tableBodyEl = document.querySelector('#scores');
 
   if (scores.length) {
+    // Update the DOM with the scores
     for (const [i, score] of scores.entries()) {
       const positionTdEl = document.createElement('td');
       const nameTdEl = document.createElement('td');
@@ -30,15 +34,20 @@ async function loadScores() {
       dateTdEl.textContent = score.date;
 
       const rowEl = document.createElement('tr');
-      rowEl.appendChild(dateTdEl);
+      rowEl.appendChild(positionTdEl);
+      rowEl.appendChild(nameTdEl);
       rowEl.appendChild(scoreTdEl);
+      rowEl.appendChild(dateTdEl);
 
       tableBodyEl.appendChild(rowEl);
     }
   } else {
-    tableBodyEl.innerHTML = '<tr><td colSpan=4>Play a game to see your</td></tr>';
+    tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to score</td></tr>';
   }
 }
+
+
+
 function displayQuote(data) {
   const containerEl = document.querySelector("#quote");
 

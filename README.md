@@ -68,4 +68,12 @@ For this deliverable I properly styled the application into its final appearance
 - **Interaction Logic** I got the entire connect 4 game to work the way it should
 - RIght now the leaderboard doesn't do anything, but I'll implement that in the future
 
+## Service deliverable
 
+For this deliverable I added backend endpoints that receives whether someone won a game, and returns that.
+
+- **Node.js/Express HTTP service** - done!
+- **Static middleware for frontend** - done!
+- **Calls to third party endpoints** - I made it display a random quote on the game history page.
+- **Backend service endpoints** - Endpoints for the games that the players won.
+- **Frontend calls service endpoints** - I used this to load the game history.

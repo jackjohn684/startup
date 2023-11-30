@@ -88,7 +88,7 @@ For this deliverable I stored the winners of the games in the database
 
 ## Login deliverable
 
-For this deliverable I associate the votes with the logged in user.
+For this deliverable I associate the game history with the user.
 
 - **User registration** - Creates a new account in the database.
 - **existing user** - It lets you sign in as a user if it already exists. It remembers the game history of that user

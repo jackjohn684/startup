@@ -77,3 +77,24 @@ For this deliverable I added backend endpoints that receives whether someone won
 - **Calls to third party endpoints** - I made it display a random quote on the game history page.
 - **Backend service endpoints** - Endpoints for the games that the players won.
 - **Frontend calls service endpoints** - I used this to load the game history.
+- 
+## DB deliverable
+
+For this deliverable I stored the winners of the games in the database
+
+- **MongoDB Atlas database created** - done!
+- **Endpoints for data** - My endpoints send the data to mongo.
+- **Stores data in MongoDB** - done!
+
+## Login deliverable
+
+For this deliverable I associate the votes with the logged in user.
+
+- **User registration** - Creates a new account in the database.
+- **existing user** - It lets you sign in as a user if it already exists. It remembers the game history of that user
+- **Use MongoDB to store credentials** - Stores the user and their game history.
+- **Restricts functionality** - You are stuck on the login page until you log in.
+
+
+
+

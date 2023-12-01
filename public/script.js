@@ -1,5 +1,6 @@
 // Game Logic
-
+const GameEndEvent = 'gameEnd';
+const GameStartEvent = 'gameStart';
 // Variables to track current position in each column
 val_c1 = 1
 val_c2 = 1
@@ -13,7 +14,8 @@ val_c7 = 1
 turn = 1
 // Function to check for a win
 const playerNameEl = document.querySelector('.player-name');
-playerNameEl.textContent = this.getPlayerName();
+playerNameEl.textContent = getPlayerName();
+configureWebSocket();
 function check(player) {
     setTimeout(() => {
 
@@ -23,10 +25,10 @@ function check(player) {
                     document.getElementById("whosturn").innerText = `${player} wins`
                     if (player == "red")
                     {
-                    this.saveScore(0);
+                    saveScore(0);
                     }
                     else{
-                        this.saveScore(1);
+                        saveScore(1);
                     }
                 }
 
@@ -39,10 +41,10 @@ function check(player) {
                     document.getElementById("whosturn").innerText = `${player} wins`
                     if (player == "red")
                     {
-                    this.saveScore(0);
+                    saveScore(0);
                     }
                     else{
-                        this.saveScore(1);
+                        saveScore(1);
                     }
                 }
 
@@ -56,10 +58,10 @@ function check(player) {
                     document.getElementById("whosturn").innerText = `${player} wins`
                     if (player == "red")
                     {
-                    this.saveScore(0);
+                    saveScore(0);
                     }
                     else{
-                        this.saveScore(1);
+                        saveScore(1);
                     }
                 }
 
@@ -72,10 +74,10 @@ function check(player) {
                     document.getElementById("whosturn").innerText = `${player} wins`
                     if (player == "red")
                     {
-                    this.saveScore(0);
+                    saveScore(0);
                     }
                     else{
-                        this.saveScore(1);
+                        saveScore(1);
                     }
                 }
 
@@ -120,23 +122,19 @@ function getPlayerName() {
     return localStorage.getItem('userName') ?? 'Mystery player';
   }
 
-setInterval(() => {
-    const score = Math.floor(Math.random() * 3000);
-    const chatText = document.querySelector('#player-messages');
-    chatText.innerHTML =
-      `<div class="event"><span class="player-event">Eich</span> won a game</div>` + chatText.innerHTML;
-  }, 5000);
 
   function reload(){
     var container = document.getElementById("board");
     container.reload()
+    broadcastEvent(this.getPlayerName(), GameStartEvent, {});
     
-   //this line is to watch the result in console , you can remove it later	
+    
+   //line is to watch the result in console , you can remove it later	
     console.log("Refreshed"); 
 }
 
 async function saveScore(score) {
-    const userName = this.getPlayerName();
+    const userName = getPlayerName();
     const date = new Date().toLocaleDateString();
     const newScore = {name: userName, score: score, date: date};
 
@@ -147,12 +145,13 @@ async function saveScore(score) {
         body: JSON.stringify(newScore),
       });
 
+      broadcastEvent(userName, GameEndEvent, newScore);
       // Store what the service gave us as the high scores
       const scores = await response.json();
       localStorage.setItem('scores', JSON.stringify(scores));
     } catch {
       // If there was an error then just track scores locally
-      this.updateScoresLocal(newScore);
+      updateScoresLocal(newScore);
     }
   }
 function updateScoresLocal(newScore) {
@@ -180,4 +179,46 @@ function updateScoresLocal(newScore) {
     }
 
     localStorage.setItem('scores', JSON.stringify(scores));
+  }
+
+  function configureWebSocket() {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    socket.onopen = (event) => {
+      displayMsg('system', 'game', 'connected');
+    };
+    socket.onclose = (event) => {
+      displayMsg('system', 'game', 'disconnected');
+    };
+    socket.onmessage = async (event) => {
+      const msg = JSON.parse(await event.data.text());
+      if (msg.type === GameEndEvent) {
+        if(msg.value.score == 0)
+        {
+            displayMsg('player', msg.from, "finished a game. Red won!");
+        }
+        else
+        {
+            displayMsg('player,', msg.from, "finshed a game. Yellow won!")
+        }
+        
+      } else if (msg.type === GameStartEvent) {
+        displayMsg('player', msg.from, `started a new game`);
+      }
+    };
+  }
+
+  function displayMsg(cls, from, msg) {
+    const chatText = document.querySelector('#player-messages');
+    chatText.innerHTML =
+      `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` + chatText.innerHTML;
+  }
+
+  function broadcastEvent(from, type, value) {
+    const event = {
+      from: from,
+      type: type,
+      value: value,
+    };
+    socket.send(JSON.stringify(event));
   }

@@ -95,6 +95,15 @@ For this deliverable I associate the game history with the user.
 - **Use MongoDB to store credentials** - Stores the user and their game history.
 - **Restricts functionality** - You are stuck on the login page until you log in.
 
+  ## WebSocket deliverable
+
+For this deliverable I used webSocket to update the votes on the frontend in realtime.
+
+- **Backend listens for WebSocket connection** - done!
+- **Frontend makes WebSocket connection** - done!
+- **Data sent over WebSocket connection** - done!
+- **WebSocket data displayed** - It displays in realtime if a player finishes a game.
+
 
 
 

@@ -104,6 +104,14 @@ For this deliverable I used webSocket to update the votes on the frontend in rea
 - **Data sent over WebSocket connection** - done!
 - **WebSocket data displayed** - It displays in realtime if a player finishes a game.
 
+- ## React deliverable
+
+
+- **Bundled and transpiled** - Yes!
+- **Components** - Login, the game, the table for the game History are all components.
+- **Router** - The router is used for the navigation between pages
+- **Hooks** - I use useEffect in multiple places
+
 
 
 
